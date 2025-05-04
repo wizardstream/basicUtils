@@ -1,5 +1,5 @@
 
-# BasicUtils
+# BasicUtils V.0.0.2
 
 A collection of basic utility functions that can be used for various tasks. The `basicUtils.py` script provides several commands to make daily operations easier.
 
