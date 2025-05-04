@@ -82,28 +82,25 @@ Here are a few examples of what the script can do:
 #### Math Operations:
 
 ```bash
-$ basicUtils add 5 10
+$ basicUtils -calc add 5 10
 # Output: 15
 
-$ basicUtils subtract 15 5
+$ basicUtils -calc subtract 15 5
 # Output: 10
 ```
 
 #### Date and Time:
 
 ```bash
-$ basicUtils date
+$ basicUtils -dateTime
 # Output: Current date and time (formatted)
-
-$ basicUtils time
-# Output: Current time
 ```
 
 #### Random Hexadecimal:
 
 ```bash
-$ basicUtils random-hex
-# Output: A random hexadecimal value (e.g., 1a3f4b)
+$ basicUtils -random 4
+# Output: A random hexadecimal value (e.g., 1a3f4b) 4 bytes big
 
 ```
 ### Other Commands
