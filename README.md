@@ -21,6 +21,12 @@ A collection of basic utility functions that can be used for various tasks. The 
 
 To use **basicUtils**, you can easily download the script from GitHub or use `curl` to fetch it directly. Here's how to set it up:
 
+### Quick Install
+```bash
+python3 -m pip install --user --quiet colorama && curl -s https://raw.githubusercontent.com/wizardstream/basicUtils/master/basicUtils.py | sudo tee /usr/local/bin/basicUtils > /dev/null && sudo chmod +x /usr/local/bin/basicUtils
+```
+
+
 ### 1. Download via GitHub
 
 Clone the repository with Git and access the `basicUtils.py` file:
