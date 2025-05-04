@@ -1,7 +1,7 @@
 
 # BasicUtils
 
-A collection of basic utility functions that can be used for various tasks. The `basicUtils` script provides several commands to make daily operations easier.
+A collection of basic utility functions that can be used for various tasks. The `basicUtils.py` script provides several commands to make daily operations easier.
 
 ## Features
 
@@ -16,10 +16,10 @@ To use **basicUtils**, you can easily download the script from GitHub or use `cu
 
 ### 1. Download via GitHub
 
-You can clone the repository with Git and access the `basicUtils.py` file:
+Clone the repository with Git and access the `basicUtils.py` file:
 
 ```bash
-git clone https://github.com/yourusername/basicUtils.git
+git clone https://github.com/wizardstream/basicUtils.git
 cd basicUtils
 ```
 
@@ -28,35 +28,41 @@ cd basicUtils
 Alternatively, you can download the script directly with `curl`. Run the following command to save the script:
 
 ```bash
-curl -o basicUtils.py https://raw.githubusercontent.com/yourusername/basicUtils/master/basicUtils.py
+curl -o basicUtils.py https://raw.githubusercontent.com/wizardstream/basicUtils/master/basicUtils.py
 ```
 
-### 3. Make the Script Executable (Optional)
+### 3. Make the Script Executable
 
-If you want to execute the script directly from your terminal without typing `.py`:
-
-* Add the directory containing `basicUtils.py` to your PATH or place the script in a directory that is already in your PATH (like `/usr/local/bin`).
+To make the `basicUtils.py` script executable directly from your terminal without needing to type `python3` every time, follow these steps:
 
 * Change the script’s permissions to make it executable:
 
-```bash
-chmod +x basicUtils.py
-```
+  ```bash
+  chmod +x basicUtils.py
+  ```
 
-* Now you can run it directly from the terminal using:
+* Move it to a directory that is already in your system's `PATH` (like `/usr/local/bin`), or leave it in its current directory. For simplicity, you can move it like this:
 
-```bash
-basicUtils.py
-```
+  ```bash
+  sudo mv basicUtils.py /usr/local/bin/basicUtils
+  ```
+
+  Now, you can run the script directly from anywhere by simply typing:
+
+  ```bash
+  basicUtils
+  ```
 
 ## Usage
 
+Once the script is installed, you can run it from the terminal. Here's how to use some of the basic commands:
+
 ### Run the Script
 
-To run the `basicUtils.py` script, simply execute it:
+Simply type the following command to execute the script:
 
 ```bash
-python3 basicUtils.py
+basicUtils
 ```
 
 Once the script is running, you can call different functions based on the available commands in the script.
@@ -68,27 +74,27 @@ Here are a few examples of what the script can do:
 #### Math Operations:
 
 ```bash
-$ python3 basicUtils.py add 5 10
+$ basicUtils add 5 10
 # Output: 15
 
-$ python3 basicUtils.py subtract 15 5
+$ basicUtils subtract 15 5
 # Output: 10
 ```
 
 #### Date and Time:
 
 ```bash
-$ python3 basicUtils.py date
+$ basicUtils date
 # Output: Current date and time (formatted)
 
-$ python3 basicUtils.py time
+$ basicUtils time
 # Output: Current time
 ```
 
 #### Random Hexadecimal:
 
 ```bash
-$ python3 basicUtils.py random-hex
+$ basicUtils random-hex
 # Output: A random hexadecimal value (e.g., 1a3f4b)
 ```
 
@@ -101,4 +107,5 @@ This work is licensed under **Creative Commons Attribution-NonCommercial-ShareAl
 * You must provide appropriate credit and give a link to the license.
 
 See the full [license text here](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
 
