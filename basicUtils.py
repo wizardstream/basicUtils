@@ -4,6 +4,8 @@ import sys
 from datetime import datetime
 import secrets
 from colorama import Fore, Back, Style
+import requests
+import os
 
 now = datetime.now()
 
@@ -12,6 +14,38 @@ def wait(timeInSeconds):
 
 def greet():
     print("Hello, world!")
+
+
+def getWeather(city):
+    # Retrieve the API key from the environment
+    api_key = "cf1bb667de5d850e3eddee8ed46e897c"
+    if not api_key:
+        print("[ERROR] API key not found. Please set the OPENWEATHER_API_KEY environment variable.")
+        return
+
+    url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
+
+    try:
+        response = requests.get(url)
+        data = response.json()
+
+        if response.status_code != 200:
+            print(f"[ERROR] City not found or invalid key: {data.get('message', 'Unknown error')}")
+            return
+
+        name = data['name'] + ", " + data['sys']['country'] + ", " + str(data['coord']['lat']) + "N/S, " + str(data['coord']['lon']) + "E/W"
+        temp = data['main']['temp']
+        feels = data['main']['feels_like']
+        weather = data['weather'][0]['description']
+        humidity = data['main']['humidity']
+
+        print(f"📍 Weather in {name}")
+        print(f"🌡️ Temperature: {temp}°C (feels like {feels}°C)")
+        print(f"🌥️ Condition: {weather.capitalize()}")
+        print(f"💧 Humidity: {humidity}%")
+
+    except Exception as e:
+        print("[ERROR] Failed to fetch weather:", str(e))
 
 def help():
     print(Fore.GREEN + """
@@ -26,7 +60,9 @@ def help():
     
     --help    --h         Shows this help screen
 
-    -random   -rand       basicUtils -rand _num_   Generates random Hex number _num_ bytes big      
+    -random   -rand       basicUtils -rand _num_   Generates random Hex number _num_ bytes big
+    
+    -weather              Shows the weather of the city listed after the tag (-weather)
     """)
     print(Fore.WHITE + "")
 def calc():
@@ -84,6 +120,8 @@ if __name__ == "__main__":
 
     if command == "-greet" or command == "-g":
         greet()
+    elif command == "-weather":
+        getWeather(sys.argv[2])
     elif command == "--help" or command == "--h":
         help()
     elif command == "-calc" or command == "-c" or command == "-maths":
