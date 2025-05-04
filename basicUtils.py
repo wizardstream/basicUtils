@@ -63,11 +63,18 @@ def HexRandom():
     print(secrets.token_hex(int(sys.argv[2])))
 
 def echo():
+    message = ""
+    a = 0
     if len(sys.argv) < 3:
         print("")
         return None
-    print(sys.argv[3])
-
+    for i in sys.argv:
+        a += 1
+        if a < 3:
+            continue
+        message = message + " " + i 
+    print(message)
+    message = ""
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("Missing arguments, try --help for help.")
