@@ -3,6 +3,13 @@
 
 A collection of basic utility functions that can be used for various tasks. The `basicUtils.py` script provides several commands to make daily operations easier.
 
+## REQUIRED
+
+* Colorama is required for colouring the outputs
+  ```bash
+  pip install colorama
+  ```
+
 ## Features
 
 * Basic math operations
@@ -97,6 +104,17 @@ $ basicUtils time
 ```bash
 $ basicUtils random-hex
 # Output: A random hexadecimal value (e.g., 1a3f4b)
+
+```
+### Other Commands
+
+Use `--help` or `--h` for a list of commands and how to use them.
+```bash
+basicUtils --h
+```
+or
+```bash
+basicUtils --help
 ```
 
 ## License
