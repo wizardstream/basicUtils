@@ -1,4 +1,15 @@
 
+
+ _               _      _   _ _   _ _     
+| |             (_)    | | | | | (_) |    
+| |__   __ _ ___ _  ___| | | | |_ _| |___ 
+| '_ \ / _` / __| |/ __| | | | __| | / __|
+| |_) | (_| \__ \ | (__| |_| | |_| | \__ \
+|_.__/ \__,_|___/_|\___|\___/ \__|_|_|___/
+                                          
+                                          
+
+
 # BasicUtils V.0.0.3
 
 A collection of basic utility functions that can be used for various tasks. The `basicUtils.py` script provides several commands to make daily operations easier.
