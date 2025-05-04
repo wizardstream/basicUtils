@@ -52,6 +52,7 @@ To make the `basicUtils.py` script executable directly from your terminal withou
   ```bash
   basicUtils
   ```
+**Note:** The `.py` extension will be removed when you move the script to a directory in your `PATH`. This allows you to run the script directly by typing `basicUtils` (without the `.py` suffix) from anywhere in the terminal.
 
 ## Usage
 
