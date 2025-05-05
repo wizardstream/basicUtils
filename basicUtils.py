@@ -46,7 +46,7 @@ def getIP():
 
 def getWeather(city):
     # Retrieve the API key from the environment
-    api_key = "cf1bb667de5d850e3eddee8ed46e897c"
+    api_key = "INSERT API KEY FOR OPEN WEATHER"
     if not api_key:
         print("[ERROR] API key not found. Please set the OPENWEATHER_API_KEY environment variable.")
         return
